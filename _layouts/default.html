@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body class="preload">
+    <div class="top"></div>
+    <div class="profile" style="background-image: url({{ site.background }});">
+        <div class="titlebox">
+        <a href="{{ site.baseurl }}/"><h1>{{ site.name }}</h1></a>
+        <p>{{ site.description }}</p>
+        <ul class="social">
+            {% if site.github %}
+            <a type="button" href="http://github.com/{{ site.github }}">
+                <i class="fa fa-github"></i>
+            </a>
+            {% endif %} {% if site.twitter %}
+            <a type="button" href="http://twitter.com/{{ site.twitter }}">
+                <i class="fa fa-twitter"></i>
+            </a>
+            {% endif %}
+        </ul>
+        </div>
+    </div>
+    <div class="posts">
+        {{ content }}
+    </div>
+    <div class="footer">
+        <p>Content &copy; 2016-2017 Laurel Hart</p>
+        <p><a href="https://github.com/thinker3197/ink">Ink Theme</a> by <a href="https://github.com/thinker3197">thinker3197</a></p>
+    </div>
+</body>
+<script type="text/javascript">
+    window.onload = function(){
+        document.getElementsByTagName("BODY")[0].classList.remove("preload");
+    }
+</script>
+</html>

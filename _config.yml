@@ -1,0 +1,50 @@
+name:               "Electric Seance"
+description:        ""
+
+url:                ""
+author:             "konahart"
+email:              "laurel.elise.hart@gmail.com"
+twitter:            "konahart"
+github:             "konahart/electric-seance"
+
+disqus_shortname:   "konahart"
+
+background:         "http://i.imgur.com/kA73HiU.jpg"
+
+paginate:           5
+paginate_path:      "/page:num/"
+
+baseurl:            "/Electric-Seance"
+permalink:          /:year/:month/:day/:title/
+
+markdown:           kramdown
+
+rel-nav:
+  - name:           "Demos"
+    href:           "demos"
+  - name:           "About"
+    href:           "about"
+
+abs-nav:
+  - name:           "Download"
+    href:           "https://github.com/konahart/Electric-Seance"
+
+sass:
+  style:            :compressed
+
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+gems:
+  - jekyll-paginate
